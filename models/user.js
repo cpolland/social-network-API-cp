@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
-const moment = require('.moment');
 
-// Schema to create Student model
-const Users = new Schema(
+
+
+const UserSchema = new Schema(
   {
     username: {
       type: String,
@@ -14,14 +14,14 @@ const Users = new Schema(
       required: true,
       unique: true,
     },
-    thoughts: {
+    thoughts: [{
       type: Schema.Types.ObjectId,
       ref: 'Thought'  
-    },
-    friends: {
+    }],
+    friends: [{
         type: Schema.Types.ObjectId,
         ref: 'User'  
-      },
+      }],
     
   },
   {
@@ -35,6 +35,6 @@ UserSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 })
 
-const Student = model('user', UserSchema);
+const User = model('User', UserSchema);
 
 module.exports = User;

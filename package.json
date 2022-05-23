@@ -1,0 +1,25 @@
+{
+  "name": "social-network-api-cp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpolland/social-network-API-cp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cpolland/social-network-API-cp/issues"
+  },
+  "homepage": "https://github.com/cpolland/social-network-API-cp#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.4"
+  }
+}
